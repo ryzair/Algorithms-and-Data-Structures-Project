@@ -14,4 +14,4 @@ cd Algorithms-and-Data-Structures-Project
 
 5. Navigate to the directory conataing 'Algorithms-and-Data-Structures-Project'
 
-6. Execute the script 'main.py'
+6. Execute the script 'Dijkstra's Algorithm.py'
