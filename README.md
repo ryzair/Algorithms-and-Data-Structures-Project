@@ -1,4 +1,6 @@
 # Algorithms-and-Data-Structures-Project
+Group 13 
+Emmanuel Paul-Chinka
 
 Prerequisites
 Python 3.x: Ensure you have Python 3.x installed on your system. The code is compatible with Python 3.6 and above.
