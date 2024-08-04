@@ -4,7 +4,7 @@ class Graph:
     def __init__(self):
         self.adj_list = {}  # Dictionary to store adjacency list as a dictionary of dictionaries
         self.charging_stations = {'H', 'K', 'Q', 'T'} # Set of charging stations
-
+    #add edge
     def add_edge(self, u, v, weight):
         if u not in self.adj_list:
             self.adj_list[u] = {}
@@ -13,12 +13,12 @@ class Graph:
         
         self.adj_list[u][v] = weight
         self.adj_list[v][u] = weight  # Assuming an undirected graph
-
+    #Funvtion for printing graph
     def print_graph(self):
         for node, neighbors in self.adj_list.items():
             connections = ", ".join([f"{neighbor}: {weight}" for neighbor, weight in neighbors.items()])
             print(f"{node} : {{{connections}}}")
-
+    #dijkstra algorithm function
     def dijkstra(self, start):
         pq = [(0, start)]  # (distance, node)
         distances = {node: float('inf') for node in self.adj_list}
@@ -41,7 +41,7 @@ class Graph:
                     shortest_paths[neighbor] = shortest_paths[current_node] + [neighbor]
         
         return distances, shortest_paths
-    
+    #function to compute shortest path to EV stations
     def shortest_path_to_ev_stations(self, start):
         distances, shortest_paths = self.dijkstra(start)
         charging_station_paths = {station: shortest_paths[station] for station in self.charging_stations}
@@ -58,11 +58,11 @@ class Graph:
         # Print the most efficient route
         print(f"\nMost efficient route to a charging station is to {most_efficient_station}: {most_efficient_path}, Distance: {most_efficient_distance}")
 
-# Example usage
+# main.py
 def main():
     graph = Graph()
 
-    # Load data from CSV file
+    # Load data from CSV file [correct to the right path in your system]
     csv_file_path = 'C:/Users/paula/Desktop/SUMMER 24 COURSES/Algorithims and Data Structure/Assignment 3/nodes_network.csv'
 
     with open(csv_file_path, 'r') as file:
@@ -88,6 +88,6 @@ def main():
         graph.shortest_path_to_ev_stations(start_node)
     else:
         print("Invalid starting node. Please enter a node that exists in the graph.")
-
+#run main
 if __name__ == "__main__":
     main()
