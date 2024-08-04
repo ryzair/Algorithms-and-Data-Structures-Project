@@ -81,7 +81,7 @@ def main():
     graph.print_graph()
 
     # Prompt the user for the starting node
-    start_node = input("Enter the starting node: ")
+    start_node = input("Enter the starting node in Capital Letters: ")
 
     if start_node in graph.adj_list:
         # Find and print the shortest paths to each charging station from the starting node
