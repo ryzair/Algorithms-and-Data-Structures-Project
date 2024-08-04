@@ -63,7 +63,7 @@ def main():
     graph = Graph()
 
     # Load data from CSV file
-    csv_file_path = 'C:/Users/paula/Desktop/SUMMER 24 COURSES/Algorithims and Data Structure/nodes_network.csv'
+    csv_file_path = 'C:/Users/paula/Desktop/SUMMER 24 COURSES/Algorithims and Data Structure/Assignment 3/nodes_network.csv'
 
     with open(csv_file_path, 'r') as file:
         lines = file.readlines()
